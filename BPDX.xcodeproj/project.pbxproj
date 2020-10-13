@@ -7,19 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F346DB02534CC3800B2AB4B /* BeerCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F346DAF2534CC3800B2AB4B /* BeerCapsule.swift */; };
 		9FBD485B25344590000ED370 /* BPDXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD485A25344590000ED370 /* BPDXApp.swift */; };
 		9FBD485D25344590000ED370 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD485C25344590000ED370 /* ContentView.swift */; };
 		9FBD485F253445CD000ED370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD485E253445CD000ED370 /* Assets.xcassets */; };
 		9FBD4862253445CD000ED370 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD4861253445CD000ED370 /* Preview Assets.xcassets */; };
+		9FBD486C2534475A000ED370 /* BeerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD486B2534475A000ED370 /* BeerData.swift */; };
+		9FBD486F25344836000ED370 /* BeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD486E25344836000ED370 /* BeerModel.swift */; };
+		9FBD487525344F3E000ED370 /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD487425344F3E000ED370 /* BeerDetailView.swift */; };
+		9FBD487925344F8B000ED370 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD487825344F8B000ED370 /* SettingsView.swift */; };
+		9FBD487C2534506C000ED370 /* BeerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD487B2534506C000ED370 /* BeerHeaderView.swift */; };
+		9FBD4886253453FB000ED370 /* MaltHopsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD4885253453FB000ED370 /* MaltHopsView.swift */; };
+		9FBD4889253456DE000ED370 /* BeerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD4888253456DE000ED370 /* BeerRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F346DAF2534CC3800B2AB4B /* BeerCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCapsule.swift; sourceTree = "<group>"; };
 		9FBD485725344590000ED370 /* BPDX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BPDX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBD485A25344590000ED370 /* BPDXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPDXApp.swift; sourceTree = "<group>"; };
 		9FBD485C25344590000ED370 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9FBD485E253445CD000ED370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FBD4861253445CD000ED370 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FBD4863253445CD000ED370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FBD486B2534475A000ED370 /* BeerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerData.swift; sourceTree = "<group>"; };
+		9FBD486E25344836000ED370 /* BeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModel.swift; sourceTree = "<group>"; };
+		9FBD487425344F3E000ED370 /* BeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailView.swift; sourceTree = "<group>"; };
+		9FBD487825344F8B000ED370 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9FBD487B2534506C000ED370 /* BeerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerHeaderView.swift; sourceTree = "<group>"; };
+		9FBD4885253453FB000ED370 /* MaltHopsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaltHopsView.swift; sourceTree = "<group>"; };
+		9FBD4888253456DE000ED370 /* BeerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +68,10 @@
 		9FBD485925344590000ED370 /* BPDX */ = {
 			isa = PBXGroup;
 			children = (
+				9FBD487325344F14000ED370 /* View */,
+				9FBD48712534483B000ED370 /* Model */,
+				9FBD486A253446E7000ED370 /* Data */,
 				9FBD485A25344590000ED370 /* BPDXApp.swift */,
-				9FBD485C25344590000ED370 /* ContentView.swift */,
 				9FBD485E253445CD000ED370 /* Assets.xcassets */,
 				9FBD4863253445CD000ED370 /* Info.plist */,
 				9FBD4860253445CD000ED370 /* Preview Content */,
@@ -67,6 +85,36 @@
 				9FBD4861253445CD000ED370 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9FBD486A253446E7000ED370 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD486B2534475A000ED370 /* BeerData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9FBD48712534483B000ED370 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD486E25344836000ED370 /* BeerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FBD487325344F14000ED370 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FBD485C25344590000ED370 /* ContentView.swift */,
+				9FBD487825344F8B000ED370 /* SettingsView.swift */,
+				9F346DAF2534CC3800B2AB4B /* BeerCapsule.swift */,
+				9FBD487425344F3E000ED370 /* BeerDetailView.swift */,
+				9FBD4888253456DE000ED370 /* BeerRowView.swift */,
+				9FBD487B2534506C000ED370 /* BeerHeaderView.swift */,
+				9FBD4885253453FB000ED370 /* MaltHopsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +186,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBD4886253453FB000ED370 /* MaltHopsView.swift in Sources */,
 				9FBD485D25344590000ED370 /* ContentView.swift in Sources */,
+				9FBD486F25344836000ED370 /* BeerModel.swift in Sources */,
+				9FBD4889253456DE000ED370 /* BeerRowView.swift in Sources */,
+				9FBD486C2534475A000ED370 /* BeerData.swift in Sources */,
+				9FBD487925344F8B000ED370 /* SettingsView.swift in Sources */,
 				9FBD485B25344590000ED370 /* BPDXApp.swift in Sources */,
+				9F346DB02534CC3800B2AB4B /* BeerCapsule.swift in Sources */,
+				9FBD487525344F3E000ED370 /* BeerDetailView.swift in Sources */,
+				9FBD487C2534506C000ED370 /* BeerHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
