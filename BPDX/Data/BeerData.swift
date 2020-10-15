@@ -26,6 +26,8 @@ let beersData: [Beer] = [
         There have been many variations on the style over the years, but it has always been a fruity, spiced concoction, usually served warm. It would typically include baked apples and be similar to a mulled cider, but more recently its style has been adopted by beer makers who’ve leaned more toward darker fruit flavours, like fig and plum.
         """,
         gradientColors: [Color("ColorJubelaleLight"), Color("ColorJubelaleDark")],
+        lightcolor: "ColorJubelaleLight",
+        darkcolor: "ColorJubelaleDark",
         alc: 6.7,//6.7
         ibu: 65,//65
         malthops: ["Pale, Crystal, Extra Special, Carapils, Roasted Barley","Bravo, Cascade, Delta, Us Tettnang, East Kent Goldings"],
@@ -46,6 +48,8 @@ let beersData: [Beer] = [
         Based on its popularity at Deschutes’ public houses, Royal Fresh IIPA is now a year round offering across the brewery’s distribution footprint available in market this September. At 9% ABV and 70 IBUs, this new brand for Deschutes will be available in 6 pack bottles, 19.2 ounce cans, and on draft.
         """,
         gradientColors: [Color("ColorRoyalFreshLight"), Color("ColorRoyalFreshDark")],
+        lightcolor: "ColorRoyalFreshLight",
+        darkcolor: "ColorRoyalFreshDark",
         alc: 9.0,
         ibu: 70,
         malthops: ["2 Row, Wheat, Oats, Acidulated", "Cascade, Citra, Mosaic, Centennial, Amarillo, El Dorado, Cashmere"],
@@ -67,6 +71,8 @@ let beersData: [Beer] = [
         "Haze with a 1990s craft throwback nose—malty, with more estery fruit notes than hops. The sip highlights berry with a bit of orange and tropical fruit. Fun in its retro-malty simplicity."
         """,
         gradientColors: [Color("ColorFreshHazeLight"), Color("ColorFreshHazeDark")],
+        lightcolor: "ColorFreshHazeLight",
+        darkcolor: "ColorFreshHazeDark",
         alc: 6.5,
         ibu: 45,
         malthops: ["2 Row, Munich, Crystal, Wheat, Flaked Barley", "Amarillo, Cashmere, Mandarina Bavaria"],
@@ -95,6 +101,8 @@ let beersData: [Beer] = [
         Style be damned, Deschutes Black Butte Porter is exactly the kind of beer breweries should use to lead portfolios. It is nuanced with depth of flavor, yet it’s well balanced. Deschutes captures all of this while keeping Black Butte approachable both in body and ABV. The brewery takes a forgettable style and executes a beer that is anything but. More breweries could follow Deschutes lead and opt for something besides another flagship IPA.
         """,
         gradientColors: [Color("ColorlackButteLight"), Color("ColorlackButteDark")],
+        lightcolor: "ColorlackButteLight",
+        darkcolor: "ColorlackButteDark",
         alc: 15.5,
         ibu: 30,
         malthops: ["2 Row, Chocolate, Wheat, Crystal, Carapils", "Cascade, Tettnang"],
@@ -111,13 +119,15 @@ let beersData: [Beer] = [
         Wowza! will be available throughout J.J. Taylor Distributing Company of MN, Inc. distribution footprint in package and draft starting January of 2020.
 
 
-        “We’re thrilled with the early excitement around this brand and that Blazers fans have been enjoying WOWZA! during games,” said Neal Stewart, vice president of marketing at Deschutes. “We’ve been listening to consumers asking for lo-cal, lo-carb, and less filling beers that still taste great and pulled all the stops to get it into cans as fast as possible!”
+        We’re thrilled with the early excitement around this brand and that Blazers fans have been enjoying WOWZA! during games,” said Neal Stewart, vice president of marketing at Deschutes. “We’ve been listening to consumers asking for lo-cal, lo-carb, and less filling beers that still taste great and pulled all the stops to get it into cans as fast as possible!
 
         Stewart is confident that this trend will continue to grow and is proud that the brewery can provide an offering, like WOWZA!, that checks all the boxes for active and health-conscious consumers.
 
         WOWZA! is a full-flavored, effervescent hazy pale ale. Subtle citrus notes and a hop forward aroma join flavors of candied orange, passion fruit and blackberry with a crisp, light finish. Deschutes uses the popular ingredient, Chicory Root, a natural inulin fiber sourced from Cosucra Farms in Belgium, to balance the body and sweetness of the beer without affecting the calorie count.
         """,
         gradientColors: [Color("ColorWowzaLight"), Color("ColorWowzaDark")],
+        lightcolor: "ColorWowzaLight",
+        darkcolor: "ColorWowzaDark",
         alc: 4.0,
         ibu: 0,
         malthops: ["Pilsner, Wheat, Oat, Acidulated", "Citra, Simcoe, Cashmere, Callista"],

@@ -54,6 +54,10 @@ struct BeerDetailView: View {
                             defaults.set(beer.alc, forKey: "alc")
                             defaults.set(beer.ibu, forKey: "ibu")
                             defaults.set(beer.availability, forKey: "when")
+                            defaults.set(beer.image, forKey: "img")
+                            defaults.set(beer.lightcolor, forKey: "colorLight")
+                            defaults.set(beer.darkcolor, forKey: "colorDark")
+                            
                             isShowingInfo = true
                         }) {
                             

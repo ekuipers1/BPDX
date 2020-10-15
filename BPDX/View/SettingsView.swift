@@ -15,11 +15,94 @@ struct SettingsView: View {
     
     var body: some View {
         
+        let defaults = UserDefaults.standard
+        let img = defaults.string(forKey: "img")
+        let colorLight = defaults.string(forKey: "colorLight")
+        let colorDark = defaults.string(forKey: "colorDark")
+        
         ZStack{
-            Rectangle()
-                .fill(Color("ColorInfo"))
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .edgesIgnoringSafeArea(.all)
+            // MARK: - Swith for demo
+            let ColorLight = (colorLight!)
+            //            let ColorLight = "ColorRoyalFreshLight"
+            let ColorDark = (colorDark!)
+            //            let ColorDark = "ColorRoyalFreshDark"
+            Image(img!)
+                //            Image("RoyalFresh")
+                
+                .resizable()
+                .scaledToFit()
+                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 8, x: 6, y: 8)
+                .padding(.all, 40.0)
+                .opacity(0.6)
+            
+            
+            Circle()
+                .fill(Color(ColorDark))
+                .opacity(0.5)
+                .frame(width: 300, height: 300, alignment: .topLeading)
+                .offset(x: 100, y: -270) //3
+                .animation(Animation.easeInOut(duration: 1.9).delay(1).repeatForever(autoreverses: false))
+                .opacity(0.6)
+            
+            Circle()
+                .fill(Color(ColorLight))
+                .opacity(0.5)
+                .frame(width: 280, height: 280, alignment: .topLeading)
+                .offset(x: 100, y: -270) //3
+                .animation(Animation.easeInOut(duration: 1.9).delay(1).repeatForever(autoreverses: false))
+                .opacity(0.6)
+            
+            
+            Circle()
+                .fill(Color(ColorDark))
+                .opacity(0.5)
+                .frame(width: 300, height: 300, alignment: .topLeading)
+                .offset(x: -80, y: -100) //3
+                .animation(Animation.easeInOut(duration: 1.9).delay(1).repeatForever(autoreverses: false))
+                .opacity(0.6)
+            
+            
+            Circle()
+                .fill(Color(ColorLight))
+                .opacity(0.5)
+                .frame(width: 280, height: 280, alignment: .topLeading)
+                .offset(x: -80, y: -100) //3
+                .animation(Animation.easeInOut(duration: 1.9).delay(1).repeatForever(autoreverses: false))
+                .opacity(0.6)
+            
+            
+            Circle()
+                .fill(Color(ColorDark))
+                .opacity(0.5)
+                .frame(width: 300, height: 300, alignment: .topLeading)
+                .offset(x: 60, y: 100) //3
+                .animation(Animation.easeInOut(duration: 1.9).delay(1).repeatForever(autoreverses: false))
+                .opacity(0.6)
+            
+            
+            Circle()
+                .fill(Color(ColorLight))
+                .opacity(0.5)
+                .frame(width: 280, height: 280, alignment: .topLeading)
+                .offset(x: 60, y: 100) //3
+                .animation(Animation.easeInOut(duration: 1.9).delay(1).repeatForever(autoreverses: false))
+                .opacity(0.6)
+            
+            Circle()
+                .fill(Color(ColorDark))
+                .opacity(0.5)
+                .frame(width: 500, height: 500, alignment: .topLeading)
+                .offset(x: -30, y: 360) //3
+                .animation(Animation.easeInOut(duration: 1.9).delay(1).repeatForever(autoreverses: false))
+                .opacity(0.6)
+            
+            Circle()
+                .fill(Color(ColorLight))
+                .opacity(0.5)
+                .frame(width: 480, height: 480, alignment: .topLeading)
+                .offset(x: -30, y: 360) //3
+                .animation(Animation.easeInOut(duration: 1.9).delay(1).repeatForever(autoreverses: false))
+                .opacity(0.6)
             
             VStack(){
                 
@@ -43,67 +126,104 @@ struct SettingsView_Previews: PreviewProvider {
     }
 }
 
+// FIXME: Only show what is available
 struct AvailableIn: View {
+    // MARK: - Switch for Demo AVAIN
     var body: some View {
+        
+        let defaults = UserDefaults.standard
+        let colorLight = defaults.string(forKey: "colorLight")
+        let colorDark = defaults.string(forKey: "colorDark")
+        let ColorLight = (colorLight!)
+        //                    let ColorLight = "ColorRoyalFreshLight"
+        let ColorDark = (colorDark!)
+        //                    let ColorDark = "ColorRoyalFreshDark"
+        
         VStack(alignment: .leading){
             
             ZStack(){
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .padding(.horizontal, 20.0)
-                    .foregroundColor(Color(""))
-                    .frame(width: 340, height: 55,alignment: .center)
                 
                 Text("Availabale in")
-                    .foregroundColor(Color("ColorInfoShadowDark"))
                     .font(.system(size: 20))
                     .fontWeight(.black)
-                    .foregroundColor(Color.gray)
                     .multilineTextAlignment(.leading)
-                    .padding(.all, 20.0)
-                    .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                    .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
-            }
+                    .padding(.top)
+                    .frame(width: 210, height: 40, alignment: .bottomLeading)
+                    .shadow(color: Color(ColorDark), radius: 1, x: -1, y: -1)
+                
+            }.padding(.leading, 25.0)
             
             HStack(){
                 
+                ZStack(){
+                    
+                    Image("12")
+                        .resizable()
+                        .opacity(0.8)
+                        .scaledToFit()
+                        .shadow(color: Color(ColorLight), radius: 8, x: 8, y: 8)
+                        .frame(maxWidth: .infinity)
+                    
+                    Text("12oz")
+                        .font(.footnote)
+                        .fontWeight(.thin)
+                        .foregroundColor(Color(ColorLight))
+                }
                 
-                Image("12")
-                    .resizable()
-                    .opacity(0.8)
-                    .scaledToFit()
-                    .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                    .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
-                    .frame(maxWidth: .infinity)
-                Image("192")
-                    .resizable()
-                    .opacity(0.8)
-                    .scaledToFit()
-                    .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                    .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
-                    .frame(maxWidth: .infinity)
+                ZStack(){
+                    Image("192")
+                        .resizable()
+                        .opacity(0.8)
+                        .scaledToFit()
+                        .shadow(color: Color(ColorLight), radius: 8, x: 8, y: 8)
+                        .frame(maxWidth: .infinity)
+                    
+                    Text("19.2oz")
+                        .font(.footnote)
+                        .fontWeight(.thin)
+                        .foregroundColor(Color(ColorLight))
+                }
                 
-                Image("bottle12")
-                    .resizable()
-                    .opacity(0.8)
-                    .scaledToFit()
-                    .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                    .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
-                    .frame(maxWidth: .infinity).frame(maxWidth: .infinity)
-                Image("Draft")
-                    .resizable()
-                    .opacity(0.8)
-                    .scaledToFit()
-                    .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                    .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
-                    .frame(maxWidth: .infinity)
-                Image("Glass")
-                    .resizable()
-                    .opacity(0.8)
-                    .scaledToFit()
-                    .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                    .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
-                    .frame(maxWidth: .infinity)
+                ZStack(){
+                    Image("bottle12")
+                        .resizable()
+                        .opacity(0.8)
+                        .scaledToFit()
+                        .shadow(color: Color(ColorLight), radius: 8, x: 8, y: 8)
+                        .frame(maxWidth: .infinity).frame(maxWidth: .infinity)
+                    
+                    Text("12oz")
+                        .font(.footnote)
+                        .fontWeight(.thin)
+                        .foregroundColor(Color(ColorLight))
+                }
+                ZStack(){
+                    Image("Draft")
+                        .resizable()
+                        .opacity(0.8)
+                        .scaledToFit()
+                        .shadow(color: Color(ColorLight), radius: 8, x: 8, y: 8)
+                        .frame(maxWidth: .infinity)
+                    Text("Draft")
+                        .font(.footnote)
+                        .fontWeight(.thin)
+                        .foregroundColor(Color(ColorLight))
+                }
+                ZStack(){
+                    Image("Glass")
+                        .resizable()
+                        .opacity(0.8)
+                        .scaledToFit()
+                        .shadow(color: Color(ColorLight), radius: 8, x: 8, y: 8)
+                        .frame(maxWidth: .infinity)
+                    
+                    Text("Draft")
+                        .font(.footnote)
+                        .fontWeight(.thin)
+                        .foregroundColor(Color(ColorLight))
+                }
             }
+            .padding(.horizontal, 40.0)
             
         }
         .padding(.horizontal, 60.0)
@@ -111,69 +231,57 @@ struct AvailableIn: View {
 }
 
 struct Availabele: View {
+    // MARK: - Swith for demo AVA
     var body: some View {
         
         let defaults = UserDefaults.standard
+        let colorLight = defaults.string(forKey: "colorLight")
+        let colorDark = defaults.string(forKey: "colorDark")
         let whenavail = defaults.string(forKey: "when")
-        //        let whenavail = "Seasonal: Oct - Dec"
+        let ColorLight = (colorLight!)
+        //                    let ColorLight = "ColorRoyalFreshLight"
+        let ColorDark = (colorDark!)
+        //                    let ColorDark = "ColorRoyalFreshDark"
+        let whenavailText = (whenavail!)
+        //        let whenavailText = "Seasonal: Oct - Dec"
         
         VStack(alignment: .leading){
             
-            ZStack(){
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .padding(.horizontal, 20.0)
-                    .foregroundColor(Color(""))
-                    .frame(width: 340, height: 55,alignment: .center)
-                
-                
-                
-                Text("Availability")
-                    .foregroundColor(Color("ColorInfoShadowDark"))
-                    .font(.system(size: 20))
-                    .fontWeight(.black)
-                    .foregroundColor(Color.gray)
-                    .multilineTextAlignment(.leading)
-                    .padding(.vertical, 20.0)
-                    .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                    .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
-            }
             
+            Text("Availability")
+                .font(.system(size: 20))
+                .fontWeight(.black)
+                .multilineTextAlignment(.trailing)
+                .padding(.top, 80.0)
+                .frame(width: 300, height: 40, alignment: .bottomTrailing)
+                .shadow(color: Color(ColorDark), radius: 1, x: -1, y: -1)
             
-            ZStack(){
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .padding(.horizontal, 20.0)
-                    .foregroundColor(Color(""))
-                    .frame(width: 340, height: 55,alignment: .center)
+            HStack(alignment: .center){
                 
-                HStack(){
+                ZStack(){
                     
-                    ZStack(){
+                    Image(systemName: "calendar.circle.fill")
                         
-                        Image(systemName: "calendar.circle.fill")
-                            
-                            .font(.system(size: 30))
-                            .foregroundColor(Color("ColorInfoShadowDark"))
-                            .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                            .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
-                    }
-                    
-                    //                    Text(whenavail)
-                    Text(whenavail!)
-                        .foregroundColor(Color("ColorInfoShadowDark"))
-                        .font(.system(size: 20))
-                        .fontWeight(.medium)
-                        .foregroundColor(Color.gray)
-                        .multilineTextAlignment(.center)
-                        .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                        .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
+                        .font(.system(size: 30))
+                        .shadow(color: Color(ColorDark), radius: 8, x: -8, y: -8)
                     
                 }
+                Text(whenavailText)
+                    .font(.system(size: 20))
+                    .fontWeight(.medium)
+                    .multilineTextAlignment(.center)
+                    .shadow(color: Color(ColorDark), radius: 1, x: -2, y: -2)
+                
                 
             }
+            .frame(width: 300, height: 60, alignment: .trailing)
         }
+        .padding(.top, 80.0)
+        
     }
 }
 
+// FIXME: Fix if IBU = 0%
 struct Bitter: View {
     
     @State private var isAnimatingBTU = false
@@ -184,20 +292,45 @@ struct Bitter: View {
     @State private var drop5 = false
     @State private var drop6 = false
     
+    
     var body: some View {
-        
+        // MARK: - Switch for Demo IBU
         let defaults = UserDefaults.standard
-        let ibunumber = defaults.integer(forKey: "ibu")
-        //        let ibunumber = 65
+        let colorLight = defaults.string(forKey: "colorLight")
+        let colorDark = defaults.string(forKey: "colorDark")
+        let ColorLight = (colorLight!)
+        //                    let ColorLight = "ColorRoyalFreshLight"
+        let ColorDark = (colorDark!)
+        //                    let ColorDark = "ColorRoyalFreshDark"
+        let realibu = defaults.integer(forKey: "ibu")
+        //        let realibu = 65
         
         let bubleCalcIBU: Int = 1
-        let ibuNumber: Double = Double((Int(ibunumber))) * Double(bubleCalcIBU)
+        let ibuNumber: Double = Double((Int(realibu))) * Double(bubleCalcIBU)
         
         
         
         VStack(){
             
             HStack(){
+                
+                VStack(alignment: .leading){
+                    
+                    Text("Bitterness ibu")
+                        .font(.system(size: 20))
+                        .fontWeight(.black)
+                        .multilineTextAlignment(.leading)
+                        .frame(width: 210, height: 20, alignment: .bottomLeading)
+                        .shadow(color: Color(ColorDark), radius: 1, x: -1, y: -1)
+                    
+                    Text(String(Double(ibuNumber)))
+                        .font(.system(size: 70))
+                        .fontWeight(.black)
+                        .multilineTextAlignment(.leading)
+                        .shadow(color: Color(ColorDark), radius: 1, x: -2, y: -2)
+                        .frame(width: 200, height: 80, alignment: .bottomLeading)
+                }
+                .padding(.leading, 45.0)
                 
                 let newnumberdrop1 = -CGFloat(ibuNumber) + 10// -90
                 let newnumberdrop2 = -CGFloat(ibuNumber) + 20// -80
@@ -210,12 +343,11 @@ struct Bitter: View {
                     
                     Capsule()
                         .fill(Color("ColorInfo"))
-                        .frame(width: 60, height: 150)
-                        .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                        .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
+                        .frame(width: 60, height: 100)
+                        .shadow(color: Color(ColorDark), radius: 5, x: 3, y: 3)
                         .padding(.horizontal, 50)
                     Capsule()
-                        .fill(LinearGradient(gradient: Gradient(colors: [Color.white, Color.green]), startPoint: .top, endPoint: .bottom))
+                        .fill(LinearGradient(gradient: Gradient(colors: [Color.white, Color(ColorDark)]), startPoint: .top, endPoint: .bottom))
                         .frame(width: 60, height: self.isAnimatingBTU ? CGFloat(ibuNumber) : 0)
                         .onAppear() {
                             withAnimation(.easeOut(duration: 1.5)) {
@@ -286,44 +418,12 @@ struct Bitter: View {
                         .opacity(0.6)
                         .onAppear { self.drop5.toggle() }
                 }
-                
-                VStack(alignment: .leading){
-                    
-                    Text("Bitterness")
-                        .foregroundColor(Color("ColorInfoShadowDark"))
-                        .font(.system(size: 20))
-                        .fontWeight(.black)
-                        .foregroundColor(Color.gray)
-                        .multilineTextAlignment(.leading)
-                        .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                        .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
-                    
-                    
-                    
-                    Text(String(Double(ibuNumber)))
-                        .foregroundColor(Color("ColorInfoShadowDark"))
-                        .font(.system(size: 60))
-                        .fontWeight(.black)
-                        .foregroundColor(Color.gray)
-                        .multilineTextAlignment(.center)
-                        .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                        .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
-                    
-                }
-                Text("ibu")
-                    .foregroundColor(Color("ColorInfoShadowDark"))
-                    .font(.system(size: 20))
-                    .fontWeight(.black)
-                    .foregroundColor(Color.gray)
-                    .multilineTextAlignment(.center)
-                    .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                    .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
             }
-            
         }
     }
 }
 
+// FIXME: Fix if ALC = 0%
 struct Alcohol: View {
     
     @State private var isAnimatingALC = false
@@ -335,13 +435,19 @@ struct Alcohol: View {
     @State private var drop6 = false
     
     var body: some View {
-        
+        // MARK: - Switch for Demo ALC
         let defaults = UserDefaults.standard
-        let alcnumber = defaults.integer(forKey: "alc")
-        //        let alcnumber = 6
+        let colorLight = defaults.string(forKey: "colorLight")
+        let colorDark = defaults.string(forKey: "colorDark")
+        let ColorLight = (colorLight!)
+        //                    let ColorLight = "ColorRoyalFreshLight"
+        let ColorDark = (colorDark!)
+        //                    let ColorDark = "ColorRoyalFreshDark"
+        let realalc = defaults.integer(forKey: "alc")
+        //        let realalc = 6.5
         
         let bubleCalc: Int = 10
-        let alcNumber: Double = Double((Int(alcnumber))) * Double(bubleCalc)
+        let alcNumber: Double = Double((Int(realalc))) * Double(bubleCalc)
         
         HStack(){
             
@@ -357,11 +463,10 @@ struct Alcohol: View {
                 Capsule()
                     .fill(Color("ColorInfo"))
                     .frame(width: 60, height: 150)
-                    .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                    .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
+                    .shadow(color: Color(ColorDark), radius: 5, x: 3, y: 3)
                     .padding(.horizontal, 50)
                 Capsule()
-                    .fill(LinearGradient(gradient: Gradient(colors: [Color.white, Color.yellow]), startPoint: .top, endPoint: .bottom))
+                    .fill(LinearGradient(gradient: Gradient(colors: [Color.white, Color(ColorDark)]), startPoint: .top, endPoint: .bottom))
                     .frame(width: 60, height: self.isAnimatingALC ? CGFloat(alcNumber)  : 0)
                     .onAppear() {
                         withAnimation(.easeOut(duration: 1.5)) {
@@ -429,33 +534,21 @@ struct Alcohol: View {
             
             VStack(alignment: .leading){
                 
-                Text("Alcohol")
-                    .foregroundColor(Color("ColorInfoShadowDark"))
+                Text("Alcohol %")
                     .font(.system(size: 20))
                     .fontWeight(.black)
-                    .foregroundColor(Color.gray)
-                    .multilineTextAlignment(.leading)
-                    .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                    .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
+                    .multilineTextAlignment(.trailing)
+                    .frame(width: 180, height: 20, alignment: .bottomTrailing)
+                    .shadow(color: Color(ColorDark), radius: 1, x: -1, y: -1)
                 
-                Text(String(Double(alcnumber)))
-                    .foregroundColor(Color("ColorInfoShadowDark"))
-                    .font(.system(size: 90))
+                Text(String(alcNumber / 10))
+                    .font(.system(size: 80))
                     .fontWeight(.black)
-                    .foregroundColor(Color.gray)
-                    .multilineTextAlignment(.center)
-                    .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                    .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
+                    .multilineTextAlignment(.trailing)
+                    .shadow(color: Color(ColorDark), radius: 1, x: -2, y: -2)
+                    .frame(width: 190, height: 90, alignment: .bottomTrailing)
             }
-            Text("%")
-                .foregroundColor(Color("ColorInfoShadowDark"))
-                .font(.system(size: 20))
-                .fontWeight(.black)
-                .foregroundColor(Color.gray)
-                .multilineTextAlignment(.center)
-                .shadow(color: Color("ColorInfoShadowLight"), radius: 8, x: -8, y: -8)
-                .shadow(color: Color("ColorInfoShadowDark"), radius: 8, x: 8, y: 8)
-            
+            .padding(.trailing, 40.0)
         }
     }
 }
